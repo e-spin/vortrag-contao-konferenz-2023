@@ -31,8 +31,8 @@ Beim Update auf folgende Hürden achten bei "[Siehe auch](https://metamodels.rea
 Folgend sind zwei composer.json-Dateien abgelegt, deren Einstellungen aus ``require`` und ``repositories``
 zu übernehmen sind oder mit der Min-Version starten:
 
-* [default-min-composer.json](Docs%2Fdefault-min-composer.json)
-* [default-composer.json](Docs%2Fdefault-composer.json)
+* [default-min-composer.json](src/Docs/default-min-composer.json)
+* [default-composer.json](src/Docs/default-composer.json)
 
 Update und weitere MM-Pakete ist mit Contao-Manager oder über die Konsole möglich - ich empfehle Konsole.
 
@@ -55,4 +55,4 @@ Sofern es die weiteren Erweiterungen zulassen, sollte man das "legacy routing" i
 
 ## Tipps und Hinweise zu den Code-Snippets
 
-Dazu gibt es eine eigene [readme.md](Docs%2Freadme.md).
+Dazu gibt es eine eigene [readme.md](src/Docs/readme.md).
