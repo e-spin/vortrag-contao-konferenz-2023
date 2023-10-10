@@ -1,0 +1,28 @@
+<?php
+
+use MetaModels\IFactory;
+use MetaModels\Item;
+
+// Name der MetaModel Tabelle
+$modelName = 'mm_staff';
+
+/** @var IFactory $factory */
+$factory = $this->getContainer()->get('metamodels.factory');
+$model   = $factory->getMetaModel($modelName);
+$item    = new Item($model, []);
+
+// Simple Attribute direkt möglich
+$item->set('firstname', 'Alex');
+$item->set('name', 'Neumann');
+
+// Komplexe Attribute über widgetToValue
+$select = $model->getAttribute('division');
+$item->set('division', $select->widgetToValue('fahrdienst', 0));
+
+$fileUuid = '966c2b2b-b67e-11ec-9caf-00ce0dd3fb73';
+$file     = $model->getAttribute('image');
+$item->set('image', $file->widgetToValue($fileUuid, 0));
+
+$item->save();
+
+dump($item);

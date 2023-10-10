@@ -1,0 +1,9 @@
+<?php
+
+use App\Helper\MetaModelsTemplateHelper;
+
+// Get helper.
+$templateHelper = System::getContainer()->get(MetaModelsTemplateHelper::class);
+$items          = $templateHelper->getStaffMembersByDivisionAlias('fahrdienst');
+
+dump($items);
