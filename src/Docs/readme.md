@@ -5,7 +5,7 @@ aktivieren oder in Dev-Umgebung über ``.env`` mit Eintrag ``APP_ENV=dev`` aktiv
 
 Wenn nicht nur mit dem Ordner ``src/EventListener`` und der Attribut- bzw. Annotation-Magic
 gearbeitet wird, sondern die Services über eine eigene service.yml geladen werden sollen,
-dann folgendes in composer.json einfügen:
+dann folgendes von ``autoload`` und ``extra`` in composer.json einfügen:
 
 ```
 ,
