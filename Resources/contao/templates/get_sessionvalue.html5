@@ -1,0 +1,7 @@
+<?php
+
+$param = \Input::get('param');
+if(!empty($param))
+{
+    echo (string) ($_SESSION['FORM-DATA'][$param] ?? '');
+}

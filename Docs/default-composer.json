@@ -1,0 +1,94 @@
+{
+    "name": "metamodels/test-installation",
+    "type": "project",
+    "description": "MetaModels 2.3 @ Contao 4.13 test installation - Contao Konferenz 2023 - Key bis 01.01.2024",
+    "license": "LGPL-3.0-or-later",
+    "authors": [
+    {
+        "name": "Christian Schiffler",
+        "homepage": "https://github.com/discordier"
+    },
+    {
+        "name": "Ingolf Steinhardt",
+        "homepage": "https://github.com/zonky2"
+    }
+    ],
+    "require": {
+        "php": "^8.1",
+        "contao-community-alliance/contao-multicolumnwizard-frontend-bundle": "^2.3@dev",
+        "contao-community-alliance/contao-textfield-multiple-bundle": "^2.3@dev",
+        "contao-community-alliance/dc-general": "^2.3@dev",
+        "contao-community-alliance/dc-general-contao-frontend": "^2.3@dev",
+        "contao/conflicts": "*@dev",
+        "contao/manager-bundle": "4.13.*",
+        "jrgregory/m17-sticky-backend-footer": "^2.0",
+        "metamodels/attribute_alias": "^2.3@dev",
+        "metamodels/attribute_checkbox": "^2.3@dev",
+        "metamodels/attribute_color": "^2.3@dev",
+        "metamodels/attribute_combinedvalues": "^2.3@dev",
+        "metamodels/attribute_contentarticle": "^2.3@dev",
+        "metamodels/attribute_country": "^2.3@dev",
+        "metamodels/attribute_decimal": "^2.3@dev",
+        "metamodels/attribute_file": "^2.3@dev",
+        "metamodels/attribute_geodistance": "^2.3@dev",
+        "metamodels/attribute_langcode": "^2.3@dev",
+        "metamodels/attribute_levenshtein": "^2.3@dev",
+        "metamodels/attribute_longtext": "^2.3@dev",
+        "metamodels/attribute_numeric": "^2.3@dev",
+        "metamodels/attribute_rating": "^2.3@dev",
+        "metamodels/attribute_select": "^2.3@dev",
+        "metamodels/attribute_tablemulti": "^2.3@dev",
+        "metamodels/attribute_tabletext": "^2.3@dev",
+        "metamodels/attribute_tags": "^2.3@dev",
+        "metamodels/attribute_text": "^2.3@dev",
+        "metamodels/attribute_timestamp": "^2.3@dev",
+        "metamodels/attribute_translatedalias": "^2.3@dev",
+        "metamodels/attribute_translatedcheckbox": "^2.3@dev",
+        "metamodels/attribute_translatedcombinedvalues": "^2.3@dev",
+        "metamodels/attribute_translatedcontentarticle": "^2.3@dev",
+        "metamodels/attribute_translatedfile": "^2.3@dev",
+        "metamodels/attribute_translatedlongtext": "^2.3@dev",
+        "metamodels/attribute_translatedtablemulti": "^2.3@dev",
+        "metamodels/attribute_translatedtabletext": "^2.3@dev",
+        "metamodels/attribute_translatedtext": "^2.3@dev",
+        "metamodels/attribute_translatedurl": "^2.3@dev",
+        "metamodels/attribute_url": "^2.3@dev",
+        "metamodels/contao-frontend-editing": "^2.3@dev",
+        "metamodels/core": "^2.3@dev",
+        "metamodels/dropzone_file_upload": "^2.3@dev",
+        "metamodels/filter_checkbox": "^2.3@dev",
+        "metamodels/filter_fromto": "^2.3@dev",
+        "metamodels/filter_perimetersearch": "^2.3@dev",
+        "metamodels/filter_range": "^2.3@dev",
+        "metamodels/filter_register": "^2.3@dev",
+        "metamodels/filter_select": "^2.3@dev",
+        "metamodels/filter_tags": "^2.3@dev",
+        "metamodels/filter_text": "^2.3@dev"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://token:<TOKEN>@packages.cyberspectrum.de/r"
+        }
+    ],
+    "extra": {
+        "public-dir": "web",
+        "contao-component-dir": "assets"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php vendor/bin/contao-setup"
+        ],
+        "post-update-cmd": [
+            "@php vendor/bin/contao-setup"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "contao-community-alliance/composer-plugin": true,
+            "contao-components/installer": true,
+            "contao/manager-plugin": true,
+            "php-http/discovery": true,
+        }
+    }
+}

@@ -1,0 +1,22 @@
+<?php
+
+use MetaModels\Filter\Rules\SearchAttribute;
+use MetaModels\IFactory;
+
+// Name der MetaModel Tabelle
+$modelName = 'mm_staff';
+
+/** @var IFactory $factory */
+$factory   = $this->getContainer()->get('metamodels.factory');
+$model     = $factory->getMetaModel($modelName);
+$filter    = $model->getEmptyFilter();
+$value     = 'Neumann';
+$attribute = $model->getAttribute('name');
+$filter->addFilterRule(new SearchAttribute($attribute, $value));
+$items = $model->findByFilter($filter);
+$item  = $items->getItem();
+
+$item->set('firstname', 'Alexander');
+$item->save();
+
+dump($item);

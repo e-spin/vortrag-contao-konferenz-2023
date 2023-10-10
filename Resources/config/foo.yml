@@ -1,0 +1,5 @@
+services:
+  # "Anti-Contao-Magic-Service" - see src/ContaoManager/Plugin.php
+  App\FooBar:
+    public: false
+    class: stdClass

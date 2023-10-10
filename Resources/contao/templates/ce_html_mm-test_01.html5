@@ -1,0 +1,14 @@
+<?php
+
+use MetaModels\IFactory;
+
+// Name der MetaModel Tabelle
+$modelName = 'mm_staff';
+
+/** @var IFactory $factory */
+$factory = $this->getContainer()->get('metamodels.factory');
+$model   = $factory->getMetaModel($modelName);
+$filter  = $model->getEmptyFilter();
+$items   = $model->findByFilter($filter);
+
+dump($items->getCount(), $items);
