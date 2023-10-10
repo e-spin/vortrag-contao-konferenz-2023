@@ -32,14 +32,13 @@ Folgend sind zwei composer.json-Dateien abgelegt, deren Einstellungen übernehme
 Min-Version starten:
 
 * [default-min-composer.json](Docs%2Fdefault-min-composer.json)
-* [default-composer.json](Docs%2Fdefault-composer.json))
+* [default-composer.json](Docs%2Fdefault-composer.json)
 
 Update und weitere MM-Pakete ist mit Contao-Manager oder über die Konsole möglich - ich empfehle Konsole.
 
 **Achtung!** Durch den neuen Schemamanager werden angelegte Attribute bzw. Änderungen an Typ und
-Spaltenname nicht wie bisher direkt in die DB übernommen.
-
-Zur Übernahme bitte eine DB-Migration mit dem Install-Tool, CManager oder auf Konsole ausführen.
+Spaltenname nicht wie bisher direkt in die DB übernommen. Zur Übernahme bitte eine DB-Migration mit dem
+Install-Tool, CManager oder auf Konsole ausführen.
 Mehr dazu [hier im Handbuch]( https://metamodels.readthedocs.io/de/latest/manual/component/schema-manager.html).
 
 Wer von MM 2.0 oder 2.1 kommt, hier eine Seite mit allen (wichtigen) Änderungen zu MM 2.2,
@@ -48,7 +47,7 @@ was natürlich auch für 2.3 gilt
 * [MM 2.2](https://metamodels.readthedocs.io/de/latest/manual/new-in-mm-22.html )
 * [MM 2.3](https://metamodels.readthedocs.io/de/latest/manual/new-in-mm-23.html)  
 
-- auf der Seite gibt es unten jeweils auch eine Checkliste für ggf. notwendige manuelle Anpassungen.
+auf der Seite gibt es unten jeweils auch eine Checkliste für ggf. notwendige manuelle Anpassungen.
 
 Sofern es die weiteren Erweiterungen zulassen, sollte man das "legacy routing" in Contao abschalten - 
 [siehe Handbuch.](https://metamodels.readthedocs.io/de/latest/manual/new-in-mm-23.html?highlight=legacy_routing#allgemein-und-core)

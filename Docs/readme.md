@@ -1,4 +1,4 @@
-# Hinweise
+# Hinweise zur Arbeit mit den Code-Snippets des Vortrags
 
 Für die Ausgaben von ``dump()`` muss der Debugmodus eingeschaltet sein - entweder im Backend
 aktivieren oder in Dev-Umgebung über ``.env`` mit Eintrag ``APP_ENV=dev`` aktivieren
@@ -44,7 +44,7 @@ prüfen, ob Hook geladen wird:
 php vendor/bin/contao-console debug:container --tag=contao.hook
 ```
 
-prüfen, ob Event geladen wird:
+prüfen, ob Event - z. B. ``dc-general.model.pre-persist `` geladen wird:
 
 ```
 php vendor/bin/contao-console debug:event-dispatcher dc-general.model.pre-persist
