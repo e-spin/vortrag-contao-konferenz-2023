@@ -68,7 +68,7 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "https://token:<TOKEN>@packages.cyberspectrum.de/r"
+            "url": "https://token:one-more-thing_contao-konferenz-2023@packages.cyberspectrum.de/r"
         }
     ],
     "extra": {
