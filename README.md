@@ -28,8 +28,8 @@ Bitte nur die Pakete auswählen, die notwendig sind - sofern vorher mit bundle_a
 
 Beim Update auf folgende Hürden achten bei "[Siehe auch](https://metamodels.readthedocs.io/de/latest/manual/install.html#installation-von-mm-2-3-fur-contao-4-13-und-php-8)".
 
-Folgend sind zwei composer.json-Dateien abgelegt, deren Einstellungen übernehmen kann oder mit der
-Min-Version starten:
+Folgend sind zwei composer.json-Dateien abgelegt, deren Einstellungen aus ``require`` und ``repositories``
+zu übernehmen sind oder mit der Min-Version starten:
 
 * [default-min-composer.json](Docs%2Fdefault-min-composer.json)
 * [default-composer.json](Docs%2Fdefault-composer.json)
