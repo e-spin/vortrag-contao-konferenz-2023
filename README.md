@@ -18,23 +18,39 @@ Folien und Video sind auf der Webseite auf [e-spin.de](https://www.e-spin.de/con
 Zum Testen von MM 2.3 (Contao 4.13 + PHP 8.1) stellt das MM-Team einen Zugangs-Key bereit, der
 bis zum 01.01.2024 gilt: ``one-more-thing_contao-konferenz-2023``
 
+Folgende Pakete können installiert werden:
+
+* attribute_alias
+* attribute_checkbox
+* attribute_file
+* attribute_longtext
+* attribute_numeric
+* attribute_select
+* attribute_text
+* attribute_timestamp
+* attribute_translatedalias
+* attribute_translatedtext
+* attribute_url
+* core
+* filter_checkbox
+* filter_select
+* filter_text
+
 Sollte bis zu dem Datum das Fundraising zu MM 2.3 noch nicht abgeschlossen sein, kann man mit
-einer Zuwendung einen persönlichen, dauerhaften Zugangskey erhalten - [mehr beim Fundraising](https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-3).
+einer Zuwendung einen persönlichen, dauerhaften Zugangskey erhalten - [mehr beim Fundraising](https://now.metamodel.me/de/unterstuetzer/fundraising#metamodels_2-3) -
+natürlich dann auch mit Zugang zu [allen anderen Paketen](https://github.com/MetaModels/core/issues/1469).
 
 **Hinweise zur Installation:**
-
-Bitte nur die Pakete auswählen, die notwendig sind - sofern vorher mit bundle_all/_start gearbeitet wurde, 
-[siehe Handbuch](https://metamodels.readthedocs.io/de/latest/manual/install.html#umstellung-von-metamodels-bundle-auf-separate-module)
 
 Beim Update auf folgende Hürden achten bei "[Siehe auch](https://metamodels.readthedocs.io/de/latest/manual/install.html#installation-von-mm-2-3-fur-contao-4-13-und-php-8)".
 
 Folgend sind zwei composer.json-Dateien abgelegt, deren Einstellungen aus ``require`` und ``repositories``
-zu übernehmen sind oder mit der Min-Version starten:
+zu übernehmen sind oder mit einer der beiden Version starten:
 
 * [default-min-composer.json](src/Docs/default-min-composer.json)
 * [default-composer.json](src/Docs/default-composer.json)
 
-Update und weitere MM-Pakete ist mit Contao-Manager oder über die Konsole möglich - ich empfehle Konsole.
+Update ist mit Contao-Manager oder über die Konsole möglich - ich empfehle Konsole.
 
 **Achtung!** Durch den neuen Schemamanager werden angelegte Attribute bzw. Änderungen an Typ und
 Spaltenname nicht wie bisher direkt in die DB übernommen. Zur Übernahme bitte eine DB-Migration mit dem
