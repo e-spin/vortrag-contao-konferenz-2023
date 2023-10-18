@@ -4,6 +4,6 @@ use App\Helper\MetaModelsTemplateHelper;
 
 // Get helper.
 $templateHelper = System::getContainer()->get(MetaModelsTemplateHelper::class);
-$items          = $templateHelper->getStaffMembersByDivisionAlias('fahrdienst');
+$arrItems       = $templateHelper->getStaffMembersByDivisionAlias('fahrdienst');
 
-dump($items);
+dump($arrItems);
