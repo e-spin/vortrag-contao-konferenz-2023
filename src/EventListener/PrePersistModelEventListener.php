@@ -13,6 +13,7 @@
 
 namespace App\EventListener;
 
+use Contao\System;
 use ContaoCommunityAlliance\DcGeneral\Data\ModelInterface;
 use ContaoCommunityAlliance\DcGeneral\Event\PrePersistModelEvent;
 use MetaModels\IFactory;
@@ -53,7 +54,22 @@ class PrePersistModelEventListener
             $model->getProperty('firstname'),
             $model->getProperty('name')
         );
-        $model->setProperty('email', $email);
+        //$model->setProperty('email', $email);
+
+        $editInformation = System::getContainer()->get('cca.dc-general.edit-information');
+        $definition      = $event->getEnvironment()->getDataDefinition()->getPropertiesDefinition()->getProperty('email');
+
+        $editInformation->setModelError(
+            $model,
+            [
+                'Speichern geht nicht, nur Montags 8-10!',
+                'Der Text ist zu kurz!',
+                'Der text muss das Wort "blau" beinhalten',
+            ],
+            $definition
+        );
+        //dump((new \LogicException())->getTraceAsString());
+        //dd('hier');
     }
 
     public function x__invoke(PrePersistModelEvent $event): void
