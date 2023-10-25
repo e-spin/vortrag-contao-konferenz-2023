@@ -58,7 +58,14 @@ class MetaModelsTemplateHelper
         $this->renderFactory = $renderFactory;
     }
 
-    public function getStaffMembersByDivisionAlias($divisionAlias): array
+    /**
+     * Retrieve all staff members of a given division.
+     *
+     * @param string $divisionAlias The alias of division.
+     *
+     * @return array
+     */
+    public function getStaffMembersByDivisionAlias(string $divisionAlias): array
     {
         // Name der MetaModel Tabelle
         $modelName = 'mm_staff';
