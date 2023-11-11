@@ -54,22 +54,8 @@ class PrePersistModelEventListener
             $model->getProperty('firstname'),
             $model->getProperty('name')
         );
-        //$model->setProperty('email', $email);
 
-        $editInformation = System::getContainer()->get('cca.dc-general.edit-information');
-        $definition      = $event->getEnvironment()->getDataDefinition()->getPropertiesDefinition()->getProperty('email');
-
-        $editInformation->setModelError(
-            $model,
-            [
-                'Speichern geht nicht, nur Montags 8-10!',
-                'Der Text ist zu kurz!',
-                'Der text muss das Wort "blau" beinhalten',
-            ],
-            $definition
-        );
-        //dump((new \LogicException())->getTraceAsString());
-        //dd('hier');
+        $model->setProperty('email', $email);
     }
 
     public function x__invoke(PrePersistModelEvent $event): void
@@ -130,5 +116,31 @@ class PrePersistModelEventListener
         assert($modelFoobar instanceof IMetaModel);
         $filter = $modelFoobar->getEmptyFilter();
         $items  = $modelFoobar->findByFilter($filter);
+    }
+
+    public function xxxxx__invoke(PrePersistModelEvent $event): void
+    {
+        if ('mm_staff' !== $event->getEnvironment()->getDataDefinition()->getName()) {
+            return;
+        }
+
+        $model = $event->getModel();
+
+        $checkValidation = false;
+        if ($checkValidation) {
+            return;
+        }
+        // Speichern wird unterbunden und Fehlermeldung ausgegeben.
+        $editInformation = System::getContainer()->get('cca.dc-general.edit-information');
+        $definition      =
+            $event->getEnvironment()->getDataDefinition()->getPropertiesDefinition()->getProperty('email');
+
+        $editInformation->setModelError(
+            $model,
+            [
+                'Speichern geht nicht, nur Montags 8-10!',
+            ],
+            $definition
+        );
     }
 }
